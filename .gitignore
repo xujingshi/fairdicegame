@@ -1,0 +1,7 @@
+.idea
+.history
+cmake-build-debug
+CMakeFiles
+.vscode
+build/
+tests/

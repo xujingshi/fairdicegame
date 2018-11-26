@@ -1,0 +1,169 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Sun Nov 25 16:37:40 2018",
+    "version": "eosio::abi/1.1",
+    "structs": [
+        {
+            "name": "receipt",
+            "base": "",
+            "fields": [
+                {
+                    "name": "bet",
+                    "type": "st_bet"
+                }
+            ]
+        },
+        {
+            "name": "reveal",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "seed",
+                    "type": "checksum256"
+                }
+            ]
+        },
+        {
+            "name": "st_bet",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "player",
+                    "type": "account_name"
+                },
+                {
+                    "name": "referrer",
+                    "type": "account_name"
+                },
+                {
+                    "name": "amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "roll_under",
+                    "type": "uint8"
+                },
+                {
+                    "name": "seed_hash",
+                    "type": "checksum256"
+                },
+                {
+                    "name": "user_seed_hash",
+                    "type": "checksum160"
+                },
+                {
+                    "name": "created_at",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "st_fund_pool",
+            "base": "",
+            "fields": [
+                {
+                    "name": "locked",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "st_global",
+            "base": "",
+            "fields": [
+                {
+                    "name": "current_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "st_hash",
+            "base": "",
+            "fields": [
+                {
+                    "name": "hash",
+                    "type": "checksum256"
+                },
+                {
+                    "name": "expiration",
+                    "type": "uint64"
+                }
+            ]
+        }
+    ],
+    "types": [
+        {
+            "new_type_name": "account_name",
+            "type": "uint64"
+        }
+    ],
+    "actions": [
+        {
+            "name": "receipt",
+            "type": "receipt",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "reveal",
+            "type": "reveal",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "bets",
+            "type": "st_bet",
+            "index_type": "i64",
+            "key_names": [
+              "id"
+            ],
+            "key_types": [
+              "uint64"
+            ]
+        },
+        {
+            "name": "fundpool",
+            "type": "st_fund_pool",
+            "index_type": "i64",
+            "key_names": [
+              "locked"
+            ],
+            "key_types": [
+              "asset"
+            ]
+        },
+        {
+            "name": "global",
+            "type": "st_global",
+            "index_type": "i64",
+            "key_names": [
+              "current_id"
+            ],
+            "key_types": [
+              "uint64"
+            ]
+        },
+        {
+            "name": "hash",
+            "type": "st_hash",
+            "index_type": "i64",
+            "key_names": [
+              "hash"
+            ],
+            "key_types": [
+              "checksum256"
+            ]
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": [],
+    "abi_extensions": []
+}

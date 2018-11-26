@@ -1,0 +1,194 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Mon Nov 26 03:18:57 2018",
+    "version": "eosio::abi/1.1",
+    "structs": [
+        {
+            "name": "receipt",
+            "base": "",
+            "fields": [
+                {
+                    "name": "bet",
+                    "type": "st_bet"
+                }
+            ]
+        },
+        {
+            "name": "reveal",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "seed",
+                    "type": "checksum256"
+                }
+            ]
+        },
+        {
+            "name": "st_bet",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "player",
+                    "type": "account_name"
+                },
+                {
+                    "name": "referrer",
+                    "type": "account_name"
+                },
+                {
+                    "name": "amount",
+                    "type": "int64"
+                },
+                {
+                    "name": "symbol",
+                    "type": "symbol_type"
+                },
+                {
+                    "name": "roll_under",
+                    "type": "uint8"
+                },
+                {
+                    "name": "seed_hash",
+                    "type": "checksum256"
+                },
+                {
+                    "name": "user_seed_hash",
+                    "type": "checksum160"
+                },
+                {
+                    "name": "created_at",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "st_fund_pool",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "locked",
+                    "type": "int64"
+                }
+            ]
+        },
+        {
+            "name": "st_global",
+            "base": "",
+            "fields": [
+                {
+                    "name": "current_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "st_hash",
+            "base": "",
+            "fields": [
+                {
+                    "name": "hash",
+                    "type": "checksum256"
+                },
+                {
+                    "name": "expiration",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "symbol_type",
+            "base": "",
+            "fields": [
+                {
+                    "name": "value",
+                    "type": "symbol_name"
+                }
+            ]
+        },
+        {
+            "name": "transfer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "account_name"
+                },
+                {
+                    "name": "to",
+                    "type": "account_name"
+                }
+            ]
+        }
+    ],
+    "types": [
+        {
+            "new_type_name": "account_name",
+            "type": "uint64"
+        },
+        {
+            "new_type_name": "symbol_name",
+            "type": "uint64"
+        }
+    ],
+    "actions": [
+        {
+            "name": "receipt",
+            "type": "receipt",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "reveal",
+            "type": "reveal",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "transfer",
+            "type": "transfer",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "bets",
+            "type": "st_bet",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "fundpool",
+            "type": "st_fund_pool",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "global",
+            "type": "st_global",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "hash",
+            "type": "st_hash",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": [],
+    "abi_extensions": []
+}
